@@ -1,0 +1,6 @@
+@DownloadViaGateway_HostAddress = http://localhost:5173
+
+GET {{DownloadViaGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
