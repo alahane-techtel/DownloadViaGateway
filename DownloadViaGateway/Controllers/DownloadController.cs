@@ -27,7 +27,7 @@ namespace DownloadViaGateway.Controllers
         [HttpGet("SmallFile")]
         public async Task<FileStreamResult> SmallFile()
         {
-            var fileName = "small.mp4";
+            var fileName = "smallFile";
             var stream = System.IO.File.OpenRead(Path.Combine("Files", fileName));
 
             Response.Headers.Add("Content-Disposition", $"attachment; filename={fileName}");

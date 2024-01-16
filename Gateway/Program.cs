@@ -10,6 +10,11 @@ namespace Gateway
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Configuration
+                .AddJsonFile($"AppSettings.json", false)
+                .AddJsonFile($"Ocelot.json", false)
+                .Build();
+
             // Add services to the container.
 
             builder.Services.AddControllers();
